@@ -3,7 +3,7 @@ library(FactoMineR)
 pdf("Results.pdf")
 
 #read data
-files <- list.files(pattern = '*.txt')
+files <- list.files(pattern = '*.count')
 files
 import.list <-lapply(files, read.table, sep="\t", header=TRUE, quote = "", stringsAsFactors = FALSE)
 #import.list
