@@ -59,7 +59,7 @@ plot(cares,invisible=c("col"), title="just characters")
 plot(cares,selectCol="contrib 10", unselect=1, title="CA Factor Map - Contrib 10", autoLab="yes", col.row="black", col.col="grey70")
 
 
-plot(cares,selectCol="contrib 50", unselect=1, title="CA Factor Map - Contrib 50", autoLab="yes")
+plot(cares,selectCol="contrib 50", unselect=1, title="CA Factor Map - Contrib 50", autoLab="yes", col.row="black", col.col="grey70")
 
 
 dev.off()
