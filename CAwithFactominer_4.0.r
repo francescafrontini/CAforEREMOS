@@ -181,14 +181,14 @@ for (k in most_freqs){
 
 
 
-plot(cares,invisible=c("col"), title="just characters")
+plot(cares,invisible=c("col"), title="CA Factor Map - just characters", autoLab="yes", col.row="black")
 
 
 plot(cares,selectCol=significant10_contrib_names, unselect=1, title="CA Factor Map - Contrib 10", autoLab="yes", col.row="black", col.col="grey70")
 
-plot(cares,selectCol=significant50_contrib_names, unselect=1, title="CA Factor Map - Contrib 50", autoLab="yes", col.row="black", col.col="grey70")
+#plot(cares,selectCol=significant50_contrib_names, unselect=1, title="CA Factor Map - Contrib 50", autoLab="yes", col.row="black", col.col="grey70")
 
-plot(cares,selectCol=significant100_contrib_names, unselect=1, title="CA Factor Map - Contrib 100", autoLab="yes", col.row="black", col.col="grey70")
+#plot(cares,selectCol=significant100_contrib_names, unselect=1, title="CA Factor Map - Contrib 100", autoLab="yes", col.row="black", col.col="grey70")
 
 title_MC = cbind("CA Factor Map - Contrib", MC)
 
@@ -231,7 +231,6 @@ characters_coords <- cares$row$coord[,1:2]
 
 names <-colnames(data)[2:nr_texts_plus_one]
 
-names <-lapply(names,function(x) substr(x, 1, nchar(x)-4))
 
 cat("CA Rank","PATTERNID","PATTERN","CONTRIBUTION", names, names, names, "NearestTo" ,sep="\t","\n", file = "analysis_contrib.csv", append=FALSE)
 
